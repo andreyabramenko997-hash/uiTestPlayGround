@@ -1,5 +1,6 @@
 package com.uitestingplayground;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.RepeatedTest;
 import static com.codeborne.selenide.Condition.enabled;
 import static com.codeborne.selenide.Condition.visible;
@@ -8,7 +9,8 @@ import static com.codeborne.selenide.Selenide.$;
 
 public class DynamicId extends Base {
     @RepeatedTest(5)
-    void run(){
+    @DisplayName("Тестируем Dynamic ID")
+    public void runDynamicId(){
         UiPlayGround uiPlayGround = new UiPlayGround();
 
         uiPlayGround.openPage();

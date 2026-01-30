@@ -11,9 +11,9 @@ public class Base {
     @BeforeAll
     static void setup(){
         Configuration.browser = "chrome";
-        Configuration.browserSize = "1920x1080";
-        Configuration.timeout = 5000;
-        Configuration.pageLoadTimeout = 5000;
+        Configuration.browserSize = "2560x1440";
+        Configuration.timeout = 10000;
+        Configuration.pageLoadTimeout = 10000;
         Configuration.holdBrowserOpen = false;
         Configuration.fastSetValue = false;
         Configuration.clickViaJs = false;
@@ -24,7 +24,7 @@ public class Base {
 
     @AfterEach
     void tearDown(){
-//        Selenide.closeWebDriver();
+        Selenide.closeWebDriver();
     }
 
 

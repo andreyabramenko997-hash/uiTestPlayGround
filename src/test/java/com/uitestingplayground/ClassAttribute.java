@@ -1,5 +1,6 @@
 package com.uitestingplayground;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -11,7 +12,8 @@ import static com.codeborne.selenide.Selenide.confirm;
 
 public class ClassAttribute extends Base {
     @Test
-    void run(){
+    @DisplayName("Тестируем Class Attribute")
+    public void runClassAttribute(){
         UiPlayGround uiPlayGround = new UiPlayGround();
 
         uiPlayGround.openPage();

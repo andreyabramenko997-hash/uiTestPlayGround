@@ -9,16 +9,16 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 
-public class AJAXData extends Base {
+public class ClientSideDelay extends Base {
     @Test
-    @DisplayName("Тестируем AJAX Data")
-    void runAjaxData(){
+    @DisplayName("Тестируем Client Side Delay")
+    public void testClientSideDelay(){
         UiPlayGround uiPlayGround = new UiPlayGround();
 
         uiPlayGround.openPage();
-        uiPlayGround.stringChallenge("AJAX Data");
-        $("#ajaxButton").shouldBe(visible, Duration.ofSeconds(5)).click();
-        $("#spinner").shouldBe(visible,Duration.ofSeconds(5));
-        $(byText("Data loaded with AJAX get request.")).shouldBe(visible,Duration.ofSeconds(20)).click();
+        uiPlayGround.stringChallenge("Client Side Delay");
+        $("#ajaxButton").shouldBe(visible, Duration.ofSeconds(10)).click();
+        $(byText("Data calculated on the client side.")).shouldBe(visible,Duration.ofSeconds(30));
+
     }
 }
